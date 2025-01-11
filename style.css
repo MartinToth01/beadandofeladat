@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(hatterkep.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "he"
+        "me"
+        "co"
+        "ta"
+        "fo";
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "he"
+        "me"
+        "her"
+        "co"
+        "ta"
+        "fo";
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+header {
+    grid-area: he;
+    background-color: rgba(0, 0, 0, 0.7); /* Átlátszó fejléc */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu {
+    grid-area: me;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    grid-area: her;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 75px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2vw;
+    color: chocolate;
+    font-weight: bolder;
+}
+
+.content {
+    grid-area: co;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    border-bottom: 3px black solid;
+}
+
+.tablazat {
+    grid-area: ta;
+    padding: 2rem;
+    background-color: aliceblue;
+    line-height: 2.6;
+}
+
+footer {
+    grid-area: fo;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+}
